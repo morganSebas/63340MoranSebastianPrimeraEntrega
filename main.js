@@ -20,10 +20,13 @@ console.log( "Cuotas seleccionada: " + cuotas)
 const   calculoCuota = (cantCuota ) => 
 {
      let importeCuota = (importe/cantCuota)
-     let importeConInteres = importeCuota  + (importeCuota * (intereses/100))
+     console.log(importeCuota)
+     let importeConInteres = importeCuota  + (importeCuota * (1 +(intereses/100)))
+     console.log(importeConInteres)
      let ImporteCuotaConIVa = importeConInteres *  ( 1 + 21/100)
+     console.log(ImporteCuotaConIVa)
      return ImporteCuotaConIVa
 }
 for (let cuota = 1; cuota <=cuotas; cuota++){
-    console.log( "Cuota: " + cuota + "Importe: " + calculoCuota(cuotas) )
+    console.log( "Cuota: " + cuota + " Importe: " + calculoCuota(cuotas) )
 }
